@@ -1,0 +1,12 @@
+{
+  "name": "grind-logger",
+  "version": "1.0.0",
+  "description": "Simple log exfiltration endpoint for GitHub credential abuse simulation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
