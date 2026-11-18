@@ -14,7 +14,6 @@ app.post('/log', (req, res) => {
     };
     logs.push(entry);
     
-    // Log to Render console for debugging
     console.log(`[LOG] Received: ${JSON.stringify(req.body)}`);
     
     res.json({ status: 'success', id: entry.id });
@@ -22,8 +21,12 @@ app.post('/log', (req, res) => {
 
 // Endpoint to view logs
 app.get('/logs', (req, res) => {
-    // Return last 50 logs
     res.json(logs.slice(-50));
+});
+
+// Endpoint for Uptime Robot
+app.get('/ping', (req, res) => {
+    res.send('OK');
 });
 
 const PORT = process.env.PORT || 3000;
